@@ -21,6 +21,7 @@ from main_app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/drf-auth/', include('rest_framework.urls')),
     path('api/v1/posts/', PostsAPIList.as_view()),
     path('api/v1/posts/<int:pk>/', PostsAPIUpdate.as_view()),
     path('api/v1/postsdelete/<int:pk>/', PostsAPIDestroy.as_view()),
