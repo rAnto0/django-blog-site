@@ -1,6 +1,7 @@
 from rest_framework import generics, viewsets
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
-from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAdminUser
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 
 from .models import Posts, Category
@@ -17,7 +18,8 @@ class PostsAPIList(generics.ListCreateAPIView):
 class PostsAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = Posts.objects.all()
     serializer_class = PostsSerializer
-    permission_classes = (IsOwnerOrReadOnly, )
+    permission_classes = (IsAuthenticated, )
+    authentication_classes = (TokenAuthentication, )
 
 
 class PostsAPIDestroy(generics.RetrieveDestroyAPIView):
