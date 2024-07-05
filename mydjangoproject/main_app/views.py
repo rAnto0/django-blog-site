@@ -12,17 +12,17 @@ from .serializers import PostsSerializer
 class PostsAPIList(generics.ListCreateAPIView):
     queryset = Posts.objects.all()
     serializer_class = PostsSerializer
-    permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
 
 class PostsAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = Posts.objects.all()
     serializer_class = PostsSerializer
-    permission_classes = (IsAuthenticated, )
-    authentication_classes = (TokenAuthentication, )
+    permission_classes = (IsAuthenticated,)
+    # authentication_classes = (TokenAuthentication, )
 
 
 class PostsAPIDestroy(generics.RetrieveDestroyAPIView):
     queryset = Posts.objects.all()
     serializer_class = PostsSerializer
-    permission_classes = (IsAdminOrReadOnly, )
+    permission_classes = (IsAdminOrReadOnly,)
