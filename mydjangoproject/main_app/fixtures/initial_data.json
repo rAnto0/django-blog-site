@@ -1,0 +1,182 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$us3QqAh20nvaD8s8KV6XyA$8Qa7Fuf+7+pzTBcYOJ93uUnklomWL+txKg8qWcsQCtk=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-05-01T08:00:00Z",
+      "photo": "",
+      "date_birth": "1995-07-15T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$TRseJn9VIezZnO9oyta8Kr$CDppLNDH/pl3fYFlM0k3yQlnrP2XE2gKK545Gn1btW0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "editor",
+      "first_name": "Content",
+      "last_name": "Editor",
+      "email": "editor@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-05-01T09:00:00Z",
+      "photo": "",
+      "date_birth": "1998-02-10T00:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "main_app.category",
+    "pk": 1,
+    "fields": {
+      "name": "Python",
+      "slug": "python"
+    }
+  },
+  {
+    "model": "main_app.category",
+    "pk": 2,
+    "fields": {
+      "name": "Django",
+      "slug": "django"
+    }
+  },
+  {
+    "model": "main_app.category",
+    "pk": 3,
+    "fields": {
+      "name": "Frontend",
+      "slug": "frontend"
+    }
+  },
+  {
+    "model": "main_app.tagpost",
+    "pk": 1,
+    "fields": {
+      "tag": "tutorial",
+      "slug": "tutorial"
+    }
+  },
+  {
+    "model": "main_app.tagpost",
+    "pk": 2,
+    "fields": {
+      "tag": "best-practices",
+      "slug": "best-practices"
+    }
+  },
+  {
+    "model": "main_app.tagpost",
+    "pk": 3,
+    "fields": {
+      "tag": "deployment",
+      "slug": "deployment"
+    }
+  },
+  {
+    "model": "main_app.tagpost",
+    "pk": 4,
+    "fields": {
+      "tag": "ui",
+      "slug": "ui"
+    }
+  },
+  {
+    "model": "main_app.articleadditionaldescription",
+    "pk": 1,
+    "fields": {
+      "title": "Кратко о статье",
+      "additional_info": "Пошаговый разбор структуры Django-проекта и базового workflow разработки."
+    }
+  },
+  {
+    "model": "main_app.articleadditionaldescription",
+    "pk": 2,
+    "fields": {
+      "title": "Чеклист перед релизом",
+      "additional_info": "Список действий перед выкладкой: настройки, статические файлы, миграции и проверка форм."
+    }
+  },
+  {
+    "model": "main_app.posts",
+    "pk": 1,
+    "fields": {
+      "title": "Старт с Django: структура проекта",
+      "slug": "start-with-django-project-structure",
+      "photo": "",
+      "content": "В этой статье разбираем структуру проекта Django: apps, templates, static и настройки. Материал полезен для старта и быстрого входа в существующий код.",
+      "time_create": "2026-05-02T10:00:00Z",
+      "time_update": "2026-05-02T10:00:00Z",
+      "is_published": true,
+      "cat": 2,
+      "tags": [1, 2],
+      "additional_info": 1,
+      "author": 2
+    }
+  },
+  {
+    "model": "main_app.posts",
+    "pk": 2,
+    "fields": {
+      "title": "Практика Python для веб-разработчика",
+      "slug": "python-practice-for-web-developer",
+      "photo": "",
+      "content": "Собрали подборку практик Python: читаемые функции, обработка ошибок и работа с типами. Это улучшает поддержку проекта и скорость ревью.",
+      "time_create": "2026-05-03T11:30:00Z",
+      "time_update": "2026-05-03T11:30:00Z",
+      "is_published": true,
+      "cat": 1,
+      "tags": [2],
+      "additional_info": null,
+      "author": 1
+    }
+  },
+  {
+    "model": "main_app.posts",
+    "pk": 3,
+    "fields": {
+      "title": "Готовим Django к деплою",
+      "slug": "prepare-django-for-deploy",
+      "photo": "",
+      "content": "Разбираем, как подготовить проект к деплою: переменные окружения, настройки DEBUG и ALLOWED_HOSTS, а также базовые проверки перед запуском.",
+      "time_create": "2026-05-04T15:45:00Z",
+      "time_update": "2026-05-04T15:45:00Z",
+      "is_published": true,
+      "cat": 2,
+      "tags": [3],
+      "additional_info": 2,
+      "author": 1
+    }
+  },
+  {
+    "model": "main_app.posts",
+    "pk": 4,
+    "fields": {
+      "title": "Черновик: идеи по улучшению UI",
+      "slug": "draft-ui-improvements-ideas",
+      "photo": "",
+      "content": "Черновая заметка с идеями по улучшению UI и структуры шаблонов.",
+      "time_create": "2026-05-04T18:00:00Z",
+      "time_update": "2026-05-04T18:00:00Z",
+      "is_published": false,
+      "cat": 3,
+      "tags": [4],
+      "additional_info": null,
+      "author": 2
+    }
+  }
+]
