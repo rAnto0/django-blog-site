@@ -14,17 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path
 from main_app.views import page_not_found
+
 from mydjangoproject import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('main_app.urls')),
-    path('users/', include('users.urls', namespace='users')),
-    path('__debug__/', include('debug_toolbar.urls')),
+    path("admin/", admin.site.urls),
+    path("", include("main_app.urls")),
+    path("users/", include("users.urls", namespace="users")),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
 
 if settings.DEBUG:
@@ -32,5 +34,5 @@ if settings.DEBUG:
 
 handler404 = page_not_found
 
-admin.site.site_header = 'Панель администрирования'
-admin.site.index_title = 'Блог'
+admin.site.site_header = "Панель администрирования"
+admin.site.index_title = "Блог"
