@@ -48,6 +48,28 @@ make run
 - `admin` / `admin12345`
 - `editor` / `editor12345`
 
+## Скриншоты
+
+### Главная страница
+
+![Главная страница](docs/screenshots/main-page.png)
+
+### Страница поста
+
+![Страница поста](docs/screenshots/post-page.png)
+
+### Страница категории
+
+![Страница категории](docs/screenshots/category-page.png)
+
+### Страница входа
+
+![Страница входа](docs/screenshots/login-page.png)
+
+### Профиль пользователя
+
+![Профиль пользователя](docs/screenshots/profile-page.png)
+
 ## Переменные окружения (опционально)
 
 Моджно создать `.env` в корне проекта при необходимости.
